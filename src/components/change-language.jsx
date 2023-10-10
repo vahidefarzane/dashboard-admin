@@ -1,16 +1,16 @@
 import usFlag from "@assets/images/us.png";
 import faFlag from "@assets/images/fa.png";
 import { useEffect, useRef, useState } from "react";
-// import { useAppContext } from "../contexts/app/app-context";
+import { useAppContext } from "../context/app-context";
 const ChangeLanguage = () => {
   const [show, setShow] = useState(false);
   const ref = useRef();
 
-  // const {language, changeLanguage} = useAppContext();
+  const {language, changeLanguage} = useAppContext();
 
-  // useEffect(() => {
-  //   setShow(false);
-  // }, [language])
+  useEffect(() => {
+    setShow(false);
+  }, [language])
 
 
   useEffect(() => {
