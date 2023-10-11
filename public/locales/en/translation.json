@@ -1,8 +1,8 @@
 {
-    "classbon": "classbon",
+    "siramz": "siramz",
     "register": {
       "title": "Online Education Platform",
-      "introMessage": "Register to use the features of Classbon online education platform",
+      "introMessage": "Register to use the features of Siramz online education platform",
       "register": "Register",
       "mobile": "Mobile",
       "password": "Password",
@@ -50,6 +50,9 @@
         "tagManagement": "TagManagement",
         "postManagement": "PostManagement"
       }
+    },
+    "topNav":{
+        "logOut":"Log Out"
     },
     "categoryList": {
       "DeleteIsNotPossible": "It is not possible to delete this category",

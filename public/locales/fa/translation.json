@@ -1,8 +1,8 @@
 {
-    "classbon": "کلاسبن",
+    "siramz": "سی رمز",
     "register": {
       "title": "پلتفرم آموزش آنلاین",
-      "introMessage": "جهت استفاده از ویژگی های پلتفرم آموزش آنلاین کلاسبن ثبت نام کنید",
+      "introMessage": "جهت استفاده از ویژگی های پلتفرم آموزش آنلاین سی رمز ثبت نام کنید",
       "register": "ثبت نام کنید",
       "mobile": "موبایل",
       "password": "رمز عبور",
@@ -50,6 +50,9 @@
         "tagManagement": "مدیریت تگ ها",
         "postManagement": "مدیریت پست ها"
       }
+    },
+    "topNav":{
+        "logOut":"خارج شوید"
     },
     "categoryList": {
       "DeleteIsNotPossible": "امکان حذف این دسته وجود ندارد",
