@@ -45,7 +45,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="text-center mt-4">
+      <div className="text-center mt-2">
         <img src={logo} style={{ height: "100px" }} />
         <h1 className="h2">{t("register.title")}</h1>
         <p className="lead">{t("register.introMessage")}</p>
@@ -58,7 +58,7 @@ const Register = () => {
         </p>
       </div>
 
-      <div className="card text-left m-auto" style={{width: "27rem"}}>
+      <div className="card text-left m-auto mb-2" style={{width: "27rem"}}>
         <div className="card-body">
           <div className="m-sm-4">
             <form onSubmit={handleSubmit(onSubmit)}>

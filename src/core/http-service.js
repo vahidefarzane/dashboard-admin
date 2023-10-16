@@ -1,9 +1,25 @@
 import axios from "axios";
 
-// const BASE_URL = import.meta.env.VITE_BASE_URL;
-// const BASE_URL = "https://react-mini-projects-api.classbon.com";
-const BASE_URL = "https://dashboard-admin-omega.vercel.app";
+const BASE_URL = "https://react-mini-projects-api.classbon.com";
+// const BASE_URL = "https://dashboard-admin-omega.vercel.app";
 
 export const httpService = axios.create({
   baseURL: BASE_URL,
 });
+
+export const httpInterceptedService = axios.create({
+  baseURL: BASE_URL,
+});
+
+httpInterceptedService.interceptors.request.use(
+  async (config) => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers = {
+        authorization: `Bearer ${token}`,
+      };
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
