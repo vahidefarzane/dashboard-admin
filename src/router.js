@@ -9,6 +9,8 @@ import MainLayout from "./layouts/mainLayout/main-layout";
 import CourseCategories from "./pages/course-categories";
 import { coursesLoader } from "./pages/courses";
 // import categoriesLoader from './pages/course-categories'
+import CourseDetails from "./features/courses/components/course-details";
+import courseDetailsLoader from "./features/courses/components/course-details";
 
 const router = createBrowserRouter([
   {
@@ -23,10 +25,13 @@ const router = createBrowserRouter([
       {
         path: "course-categories",
         Component: CourseCategories,
-        // <CategoryProvider>
-        // </CategoryProvider>
 
-        // loader: categoriesLoader,
+        loader: categoriesLoader,
+      },
+      {
+        path: "courses/:id",
+        Component: CourseDetails,
+        loader: courseDetailsLoader,
       },
     ],
   },
