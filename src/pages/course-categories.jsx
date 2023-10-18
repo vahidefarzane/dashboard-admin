@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
 import AddOrUpdateCategory from "../features/categories/components/add-or-update-category";
 import { useCategoryContext } from "../features/categories/category-context";
+import { CategoryProvider } from "../features/categories/category-context";
 
 const CourseCategories = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -105,6 +106,14 @@ const CourseCategories = () => {
         </button>
       </Modal>
     </>
+  );
+};
+
+export const CategoryProviderComponet = () => {
+  return (
+    <CategoryProvider>
+      <CourseCategories />
+    </CategoryProvider>
   );
 };
 

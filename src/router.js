@@ -6,11 +6,12 @@ import { loginAction } from "./features/identity/components/login";
 import IdentityLayout from "./layouts/identity-layout";
 import Courses from "./pages/courses";
 import MainLayout from "./layouts/mainLayout/main-layout";
-import CourseCategories from "./pages/course-categories";
+import CourseCategories, { categoriesLoader } from "./pages/course-categories";
 import { coursesLoader } from "./pages/courses";
-// import categoriesLoader from './pages/course-categories'
 import CourseDetails from "./features/courses/components/course-details";
 import courseDetailsLoader from "./features/courses/components/course-details";
+import { CategoryProvider } from "./features/categories/category-context";
+import { CategoryProviderComponet } from "./pages/course-categories";
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "course-categories",
-        Component: CourseCategories,
-
+        Component: CategoryProviderComponet,
         loader: categoriesLoader,
       },
       {
