@@ -31,8 +31,7 @@ const Login = () => {
         <p className="lead">
           {t("login.areNotRegistered")}
           <Link to="/register" className="me-2">
-            {" "}
-            {t("login.register")}{" "}
+            {t("login.register")}
           </Link>
         </p>
       </div>

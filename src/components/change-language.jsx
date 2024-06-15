@@ -4,15 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import { useAppContext } from "../contexts/app-context";
 const ChangeLanguage = () => {
   const [show, setShow] = useState(false);
-  const ref = useRef();
-
+  
   const {language, changeLanguage} = useAppContext();
-
+  
   useEffect(() => {
     setShow(false);
   }, [language])
-
-
+  
+  
+  const ref = useRef();
   useEffect(() => {
     const checkIfClickOutside = (e) => {
       if (show && ref.current && !ref.current.contains(e.target)) {
